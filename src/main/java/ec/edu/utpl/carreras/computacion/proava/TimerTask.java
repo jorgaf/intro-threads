@@ -10,9 +10,16 @@ public class TimerTask {
     }
 
     public void run() {
-        while(seconds > 0) {
+        while (seconds > 0) {
             System.out.printf("%s: %d segundos restantes%n", name, seconds);
-            seconds --;
+            seconds--;
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
+            }
         }
+        System.out.printf("%s: ¡Tiempo!%n", name);
     }
 }
