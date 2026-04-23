@@ -1,8 +1,4 @@
 package ec.edu.utpl.carreras.computacion.proava;
-
-/**
- * Hello world!
- */
 public class MultiTimerConsole {
     public static void main(String[] args) throws InterruptedException {
         TimerTask timerA = new TimerTask("Temporizador A", 8);
